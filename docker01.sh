@@ -4,7 +4,7 @@
 #
 
 #: Script Name  :  docker01.sh
-#: Version      : 1.01
+#: Version      : 1.02
 #: Author       : Chris Bloemker - homelabguy.com
 #: Date Created : June 11, 2018
 #: Date Updated : June 16, 2018
@@ -15,22 +15,24 @@
 
 # Clean Install Script [Docker] #
 
+# sets the sudo user variable
+currentuser=$(SUDO_USER)
 # update and upgrade
-sudo apt-get update
-sudo apt-get upgrade -y
+apt-get update
+apt-get upgrade -y
 # Make the mount dirs
 sudo mkdir /mnt/public
 # REMOVE some unneeded apps #
-sudo apt-get remove gnome-games -gnome-games-common empathy
+apt remove gnome-games -gnome-games-common empathy
 # Install some favorite utils #
-sudo apt-get install -y screen ncdu htop cifs-utils screenfetch tree
+apt install -y screen ncdu htop cifs-utils screenfetch tree
 # Time to install docker #
 curl -fsSL get.docker.com -o get-docker.sh
 sh get-docker.sh
 # applies the usergroup "chris" to the docker group admin #
-sudo usermod -aG docker chris
-sudo apt-get autoremove
+usermod -aG docker $currentuser
+apt-get autoremove
 # Install Webmin #
 echo "Your device has been setup successfully!"
-echo "You now have the latest version of Docker-CE installed."
+echo "You now have the latest version of Docker-CE installed: $(docker --version)"
 echo "Thank you for using chrisbloemker's bash script! :)"
