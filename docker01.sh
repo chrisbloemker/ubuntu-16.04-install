@@ -4,7 +4,7 @@
 #
 
 #: Script Name  :  docker01.sh
-#: Version      : 1.02
+#: Version      : 1.03
 #: Author       : Chris Bloemker - homelabguy.com
 #: Date Created : June 11, 2018
 #: Date Updated : June 16, 2018
@@ -16,7 +16,7 @@
 # Clean Install Script [Docker] #
 
 # sets the sudo user variable
-currentuser=$(SUDO_USER)
+currentuser=$SUDO_USER
 # update and upgrade
 apt-get update
 apt-get upgrade -y
