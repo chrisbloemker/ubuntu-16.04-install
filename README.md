@@ -4,7 +4,7 @@
 
 Just a basic script to help automate the deployment of my 16.04 LTS servers with a Docker CE environment. 
 This script does a few things, I will be adding more functionality down the road. 
-This does **not** have to be run with root permissions.
+This script **must** be run with root permissions.
 
 ## Installation 
 
@@ -19,6 +19,12 @@ Make the script executable:
 
 Run the script:
 `./docker01.sh`
+
+## Changes in 1.02
+
+Removed "sudo".
+Added variables for current user.
+Script now requires to be run as root.
 
 ## License
 
