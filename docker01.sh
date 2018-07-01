@@ -7,7 +7,7 @@
 #: Version      : 1.03
 #: Author       : Chris Bloemker - homelabguy.com
 #: Date Created : June 11, 2018
-#: Date Updated : June 16, 2018
+#: Date Updated : July 1, 2018
 #: Description  : installs the latest version of docker after a fresh ubuntu installation, updates and upgrades local packages, removes unneccessary packages. Installs my most used utilities. Creates the /mnt/public folder. Then finally installs docker and adds the username "chris" to the docker group.
 #: Example      : `./docker01.sh`
 
