@@ -32,7 +32,7 @@ sh get-docker.sh
 # applies the usergroup "chris" to the docker group admin #
 usermod -aG docker $currentuser
 apt-get autoremove
-# Install Webmin #
+# Install Webmin # ADDING SOON
 echo "Your device has been setup successfully!"
 echo "You now have the latest version of Docker-CE installed: $(docker --version)"
 echo "Thank you for using chrisbloemker's bash script! :)"
