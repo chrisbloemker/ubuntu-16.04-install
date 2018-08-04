@@ -25,7 +25,7 @@ sudo mkdir /mnt/public
 # REMOVE some unneeded apps #
 apt remove gnome-games -gnome-games-common empathy
 # Install some favorite utils #
-apt install -y screen ncdu htop cifs-utils screenfetch tree
+apt install -y screen ncdu htop cifs-utils screenfetch tree glances
 # Time to install docker #
 curl -fsSL get.docker.com -o get-docker.sh
 sh get-docker.sh
