@@ -4,10 +4,10 @@
 #
 
 #: Script Name  :  docker01.sh
-#: Version      : 1.05
+#: Version      : 1.06
 #: Author       : Chris Bloemker - homelabguy.com
 #: Date Created : June 11, 2018
-#: Date Updated : August 6, 2018
+#: Date Updated : October 17, 2018
 #: Description  : Installs the latest version of docker after a fresh ubuntu installation, updates and upgrades local packages, removes unneccessary packages. Installs my most used utilities. Creates the /mnt/public folder. Then finally installs docker and adds the username "chris" to the docker group.
 #: Example      : `./docker01.sh`
 
@@ -31,7 +31,7 @@ curl -fsSL get.docker.com -o get-docker.sh
 sh get-docker.sh
 # applies the usergroup "chris" to the docker group admin #
 usermod -aG docker $currentuser
-apt-get autoremove
+apt autoremove
 # Install Webmin #
 echo "deb https://download.webmin.com/download/repository sarge contrib" >> /etc/apt/sources.list
 wget http://www.webmin.com/jcameron-key.asc
